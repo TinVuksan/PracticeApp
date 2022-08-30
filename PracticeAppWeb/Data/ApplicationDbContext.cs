@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PracticeAppWeb.Models;
 
+
 namespace PracticeAppWeb.Data
 {
     public class ApplicationDbContext : DbContext
