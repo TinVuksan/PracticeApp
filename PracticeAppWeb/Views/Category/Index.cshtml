@@ -2,10 +2,19 @@
 @{
     ViewData["Title"] = "Index";
 }
+<div class="container-fluid p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h1>Index Category</h1>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Category" asp-action="Create" class="btn btn-lg btn-light">Create new category</a>
+        </div>
+    </div>
+</div>
 
-<h1>Index Category</h1>
 
-<table class="table table-bordered table-striped" style="width:80%">
+<table class="table table-bordered table-striped" style="width:100%">
     <thead>
         <tr>
             <th>
@@ -13,6 +22,10 @@
             </th>
             <th>
                 Display order
+            </th>
+            
+            <th style="text-align:center">
+                Actions
             </th>
         </tr>
     </thead>
@@ -24,8 +37,13 @@
                     @obj.Name
                 </td>
 
-                <td width="50%">
+                <td width="30%">
                     @obj.DisplayOrder
+                </td>
+
+                <td width="20%" style="justify-content:space-around" id="action-buttons">
+                    <button asp-controller="Category" asp-action="Edit" class="btn btn-sm btn-outline-success">Edit</button>
+                    <button asp-controller="Category" asp-action="Delete" class="btn btn-sm btn-outline-danger">Delete</button>
                 </td>
             </tr>
         }
