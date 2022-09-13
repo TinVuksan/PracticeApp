@@ -2,6 +2,7 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <div class="container-fluid p-3">
     <div class="row pt-4">
         <div class="col-6">
@@ -42,11 +43,17 @@
                 </td>
 
                 <td width="20%" style="justify-content:space-around" id="action-buttons">
-                    <button asp-controller="Category" asp-action="Edit" class="btn btn-sm btn-outline-success">Edit</button>
-                    <button asp-controller="Category" asp-action="Delete" class="btn btn-sm btn-outline-danger">Delete</button>
+                    <a asp-controller="Category" asp-action="Edit" asp-route-id = "@obj.Id" class="btn btn-sm btn-outline-success">Edit</a>
+                    <a asp-controller="Category" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-sm btn-outline-danger">Delete</a>
                 </td>
             </tr>
         }
+        
     </tbody>
+
 </table>
+
+
+
+
 
